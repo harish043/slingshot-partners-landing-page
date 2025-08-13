@@ -190,21 +190,6 @@
             transform: translateX(0);
         }
 
-        /* Technology Stack Card Styling */
-        .tech-card {
-            background-color: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(129, 140, 248, 0.2);
-            transition: all 0.3s ease;
-        }
-        .tech-card:hover {
-            background-color: rgba(99, 102, 241, 0.1);
-            border-color: rgba(99, 102, 241, 0.5);
-        }
-        .tech-card img, .tech-card svg {
-             height: 4rem;
-             width: 4rem;
-        }
-
         /* Button Shimmer Micro-interaction */
         .btn-shimmer {
             position: relative;
@@ -245,8 +230,8 @@
             </a>
             <div class="hidden md:flex space-x-8" id="desktop-nav">
                 <a href="#b2b-solutions" class="nav-link">B2B Solutions</a>
+                <a href="#demo" class="nav-link">Demo</a>
                 <a href="#b2c-solutions" class="nav-link">B2C Tools</a>
-                <a href="#tech-stack" class="nav-link">Technology</a>
                 <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -266,8 +251,8 @@
         </div>
         <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
             <a href="#b2b-solutions" class="hover:text-indigo-300">B2B Solutions</a>
+            <a href="#demo" class="hover:text-indigo-300">Demo</a>
             <a href="#b2c-solutions" class="hover:text-indigo-300">B2C Tools</a>
-            <a href="#tech-stack" class="hover:text-indigo-300">Technology</a>
             <a href="#vision" class="hover:text-indigo-300">Our Vision</a>
             <a href="#contact" class="hover:text-indigo-300">Contact</a>
         </div>
@@ -278,15 +263,19 @@
         <section id="home" class="relative text-center pt-12 md:pt-20 lg:pt-28 pb-24 md:pb-32 lg:pb-40 px-4">
             <canvas id="particle-canvas"></canvas>
             <div class="max-w-5xl mx-auto relative z-10">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter scroll-animate slide-in-left">
-                    <span class="text-white">Launch Your AI</span><br class="hidden sm:block"><span class="text-gradient">Integration Strategy</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto scroll-animate slide-in-right" style="transition-delay: 0.2s;">
-                    Our core mission is to deliver highly customized AI solutions that address the unique challenges of each client. We believe AI should not disrupt but enhance, seamlessly blending into daily workflows to boost efficiency and productivity.
-                </p>
+                <div class="scroll-animate slide-in-left">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter">
+                        <span class="text-white">Accelerate Your AI</span><br class="hidden sm:block"><span class="text-gradient">Integration Strategy</span>
+                    </h1>
+                </div>
+                <div class="scroll-animate slide-in-right" style="transition-delay: 0.2s;">
+                    <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
+                        We deliver unique AI solutions tailored to your business or personal use, integrating seamlessly into your workflows to boost efficiency, productivity, and growth.
+                    </p>
+                </div>
                 <div class="mt-10 scroll-animate" style="transition-delay: 0.4s;">
                     <a href="#contact" class="btn-shimmer inline-block bg-indigo-500 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg shadow-indigo-500/40 hover:bg-indigo-400 transition-all duration-300 hover:shadow-indigo-400/60 transform hover:scale-105">
-                        Request Consultation
+                        Get Started Today
                     </a>
                 </div>
             </div>
@@ -296,117 +285,120 @@
         <section id="b2b-solutions" class="py-20 md:py-28 px-4">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Custom AI Solutions for Business</h2>
-                    <p class="text-center mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
-                        Our B2B services are designed to empower companies by integrating AI into their operations, optimizing workflows, and driving measurable results. We take a hands-on, consultative approach to deliver tangible outcomes.
-                    </p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Tailored AI Solutions for Enterprises</h2>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 lg:gap-12 mt-16">
-                    <div class="card card-tilt rounded-2xl p-8 text-center scroll-animate slide-in-left">
-                        <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-compass-drafting text-4xl text-indigo-300"></i>
+                    <div class="scroll-animate slide-in-left">
+                        <div class="card card-tilt rounded-2xl p-8 text-center h-full">
+                            <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa-solid fa-compass-drafting text-4xl text-indigo-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">1. Discover & Recommend</h3>
+                            <p class="mt-4 text-slate-400 text-sm">We conduct a deep analysis of your workflows and performance metrics to identify high-impact AI opportunities. You receive a clear, actionable roadmap that prioritizes ROI and operational efficiency.</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">1. Discover & Recommend</h3>
-                        <p class="mt-4 text-slate-400 text-sm">We map your daily operations and analyze key metrics to identify opportunities where AI can add maximum value, delivering a detailed report and implementation roadmap with a clear ROI.</p>
                     </div>
-                    <div class="card card-tilt rounded-2xl p-8 text-center scroll-animate" style="transition-delay: 0.2s;">
-                        <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-gears text-4xl text-indigo-300"></i>
+                    <div class="scroll-animate" style="transition-delay: 0.2s;">
+                        <div class="card card-tilt rounded-2xl p-8 text-center h-full">
+                            <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa-solid fa-gears text-4xl text-indigo-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">2. Build & Integrate</h3>
+                            <p class="mt-4 text-slate-400 text-sm">Our experts design bespoke AI models, prepare your data, and integrate solutions directly into existing systems—such as CRMs and ERPs—minimizing disruption while empowering your teams through hands-on training.</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">2. Build & Integrate</h3>
-                        <p class="mt-4 text-slate-400 text-sm">Our experts design custom AI models and workflows, preparing your data and embedding solutions into existing systems like CRMs and ERPs with minimal disruption, complete with employee training.</p>
                     </div>
-                    <div class="card card-tilt rounded-2xl p-8 text-center scroll-animate slide-in-right" style="transition-delay: 0.4s;">
-                        <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-headset text-4xl text-indigo-300"></i>
+                    <div class="scroll-animate slide-in-right" style="transition-delay: 0.4s;">
+                        <div class="card card-tilt rounded-2xl p-8 text-center h-full">
+                            <div class="w-20 h-20 mx-auto bg-indigo-900/50 border border-indigo-700/50 rounded-full flex items-center justify-center mb-6">
+                                <i class="fa-solid fa-headset text-4xl text-indigo-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">3. Support & Evolve</h3>
+                            <p class="mt-4 text-slate-400 text-sm">We provide 24/7 global support, real-time performance monitoring, and ongoing model optimization to ensure your AI evolves alongside your business needs.</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">3. Support & Evolve</h3>
-                        <p class="mt-4 text-slate-400 text-sm">We provide 24/7 offshore tech support, real-time performance monitoring, and regular model retraining to ensure your AI solutions run smoothly and stay relevant as your business grows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Workflow Demo Section -->
+        <section id="demo" class="py-20 md:py-28 px-4 bg-slate-900/40">
+            <div class="max-w-4xl mx-auto card rounded-3xl p-8 md:p-12 lg:p-16 scroll-animate">
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">AI Landing Page Analyzer</h2>
+                    <p class="mt-4 text-lg text-slate-400">Enter a URL to get an AI-powered analysis of the landing page's effectiveness.</p>
+                </div>
+                <div class="mt-10 max-w-xl mx-auto">
+                    <input type="url" id="demo-input" class="w-full p-3 rounded-lg form-input" placeholder="https://example.com">
+                    <button id="demo-button" class="btn-shimmer w-full mt-6 bg-indigo-600 text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 transition-all duration-300">Analyze Landing Page</button>
+                    <div id="demo-result" class="mt-6 text-left text-base h-auto min-h-16 p-4 bg-slate-900/50 rounded-lg border border-indigo-900/50">
+                        <p class="text-slate-400">Your analysis will appear here...</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- B2C Solutions Section -->
-        <section id="b2c-solutions" class="py-20 md:py-28 px-4 bg-slate-900/40">
+        <section id="b2c-solutions" class="py-20 md:py-28 px-4">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">AI Tools for Individuals</h2>
-                    <p class="text-center mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
-                        Our B2C offerings bring AI directly to individuals through intuitive, accessible tools that act as personal AI assistants, enhancing everyday life by automating tasks and providing smart insights.
-                    </p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Personal AI Tools for Everyday Productivity</h2>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mt-16">
-                    <div class="card card-tilt rounded-2xl p-8 scroll-animate slide-in-left">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-purple-900/50 border border-purple-700/50 rounded-lg flex items-center justify-center">
-                                <i class="fa-solid fa-user-astronaut text-3xl text-purple-300"></i>
+                    <div class="scroll-animate slide-in-left">
+                        <div class="card card-tilt rounded-2xl p-8 h-full">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-16 h-16 bg-purple-900/50 border border-purple-700/50 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-user-astronaut text-3xl text-purple-300"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white">Personal AI Assistant</h3>
                             </div>
-                            <h3 class="text-2xl font-bold text-white">Personal AI Assistant</h3>
+                            <p class="mt-4 text-slate-400">A lightweight Chrome extension and desktop app that streamlines your day.</p>
+                            <ul class="mt-6 space-y-3 text-slate-400">
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span>Syncing with your calendar and email to schedule meetings automatically.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span>Drafting professional emails and documents.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span>Optimizing resumes with targeted suggestions.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span>Auto-organizing tasks and categorizing emails.</span></li>
+                            </ul>
                         </div>
-                        <p class="mt-4 text-slate-400">A lightweight AI assistant, available as a Chrome extension or downloadable app, designed to simplify your daily tasks.</p>
-                        <ul class="mt-6 space-y-3 text-slate-400">
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Productivity:</strong> Syncs with calendars and email to schedule meetings and draft replies.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Career Support:</strong> Optimizes resumes and suggests relevant job postings.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Organization:</strong> Automatically categorizes emails and curates to-do lists.</span></li>
-                        </ul>
                     </div>
-                    <div class="card card-tilt rounded-2xl p-8 scroll-animate slide-in-right" style="transition-delay: 0.2s;">
-                        <div class="flex items-center gap-4 mb-4">
-                             <div class="w-16 h-16 bg-purple-900/50 border border-purple-700/50 rounded-lg flex items-center justify-center">
-                                <i class="fa-solid fa-robot text-3xl text-purple-300"></i>
+                    <div class="scroll-animate slide-in-right" style="transition-delay: 0.2s;">
+                        <div class="card card-tilt rounded-2xl p-8 h-full">
+                            <div class="flex items-center gap-4 mb-4">
+                                 <div class="w-16 h-16 bg-purple-900/50 border border-purple-700/50 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-robot text-3xl text-purple-300"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white">Agentic AI (Coming Soon)</h3>
                             </div>
-                            <h3 class="text-2xl font-bold text-white">Agentic AI (Coming Soon)</h3>
+                            <p class="mt-4 text-slate-400">Autonomous AI agents that handle routine tasks with minimal input.</p>
+                             <ul class="mt-6 space-y-3 text-slate-400">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span>Smart Scheduling: Suggests and books appointments based on availability.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span>Financial Insights: Monitors expenses and provides proactive budgeting advice.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span>Document Generation: Creates polished documents from brief prompts.</span></li>
+                            </ul>
                         </div>
-                        <p class="mt-4 text-slate-400">We're developing autonomous AI agents that take initiative with minimal user input to enhance convenience and efficiency.</p>
-                         <ul class="mt-6 space-y-3 text-slate-400">
-                            <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Automated Scheduling:</strong> Proposes and books appointments based on your calendar and email.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Financial Management:</strong> Tracks expenses and offers budgeting tips automatically.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span><strong class="text-white">Document Creation:</strong> Generates professional documents from basic user input.</span></li>
-                        </ul>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Stack Section -->
-        <section id="tech-stack" class="py-20 md:py-28 px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Our Technology Stack</h2>
-                    <p class="text-center mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
-                        We use cutting-edge tools and frameworks to build robust, scalable, and innovative AI solutions.
-                    </p>
-                </div>
-                <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8">
-                    <!-- Tech Logos -->
-                    <div class="tech-card card-tilt flex flex-col items-center justify-center p-6 rounded-2xl scroll-animate" style="transition-delay: 0.1s;"><img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python Logo"><p class="mt-4 font-semibold text-white">Python</p></div>
-                    <div class="tech-card card-tilt flex flex-col items-center justify-center p-6 rounded-2xl scroll-animate" style="transition-delay: 0.2s;"><img src="https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg" alt="TensorFlow Logo"><p class="mt-4 font-semibold text-white">TensorFlow</p></div>
-                    <div class="tech-card card-tilt flex flex-col items-center justify-center p-6 rounded-2xl scroll-animate" style="transition-delay: 0.3s;"><img src="https://cdn.worldvectorlogo.com/logos/pytorch-2.svg" alt="PyTorch Logo"><p class="mt-4 font-semibold text-white">PyTorch</p></div>
-                    <div class="tech-card card-tilt flex flex-col items-center justify-center p-6 rounded-2xl scroll-animate" style="transition-delay: 0.4s;"><img src="https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg" alt="AWS Logo"><p class="mt-4 font-semibold text-white">AWS</p></div>
                 </div>
             </div>
         </section>
 
         <!-- Vision Section -->
-        <section id="vision" class="py-20 md:py-28 px-4 bg-slate-900/40">
+        <section id="vision" class="py-20 md:py-28 px-4">
             <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Our Vision & Commitment</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Vision & Commitment to Ethical AI</h2>
                 <p class="mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
-                    We envision a world where AI is an invisible yet indispensable partner in every business and home. Our vision is threefold:
+                    We envision a future where AI is an invisible yet indispensable partner—empowering businesses and individuals through ethical, seamless integration.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8 mt-16 text-left">
                      <div class="border-l-2 border-indigo-500 pl-6 scroll-animate slide-in-left">
-                        <h3 class="text-xl font-bold text-white">Empowerment Through Customization</h3>
-                        <p class="mt-2 text-slate-400">We reject generic AI, crafting tools that fit the specific workflows, goals, and challenges of each client and user.</p>
+                        <h3 class="text-xl font-bold text-white">Empowerment by Customization</h3>
+                        <p class="mt-2 text-slate-400">We design AI solutions that match your specific workflows, objectives, and challenges.</p>
                     </div>
                      <div class="border-l-2 border-indigo-500 pl-6 scroll-animate" style="transition-delay: 0.2s;">
                         <h3 class="text-xl font-bold text-white">Seamless Integration</h3>
-                        <p class="mt-2 text-slate-400">We make AI a natural extension of existing processes, not a replacement. Our solutions enhance without overwhelming.</p>
+                        <p class="mt-2 text-slate-400">Our AI enhances your existing processes without disruption.</p>
                     </div>
                      <div class="border-l-2 border-indigo-500 pl-6 scroll-animate slide-in-right" style="transition-delay: 0.4s;">
-                        <h3 class="text-xl font-bold text-white">Leadership in AI Innovation</h3>
-                        <p class="mt-2 text-slate-400">We strive to be pioneers in the AI space, staying ahead of trends and setting the standard for how AI is applied practically and ethically.</p>
+                        <h3 class="text-xl font-bold text-white">Ethical Innovation</h3>
+                        <p class="mt-2 text-slate-400">We prioritize responsible, transparent AI practices that respect privacy and fairness.</p>
                     </div>
                 </div>
             </div>
@@ -415,8 +407,8 @@
         <!-- Contact Form Section -->
         <section id="contact" class="py-20 md:py-28 px-4 text-center">
             <div class="max-w-4xl mx-auto card rounded-3xl p-8 md:p-12 lg:p-16 scroll-animate">
-                <h2 class="text-4xl md:text-5xl font-bold text-white">Build The Future</h2>
-                <p class="mt-4 text-lg text-slate-400">Tell us about your project, and let's launch it together.</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white">Let’s Build the Future—Together</h2>
+                <p class="mt-4 text-lg text-slate-400">Tell us about your vision, and we’ll explore how AI can bring it to life.</p>
                 <form id="contact-form" action="https://formspree.io/f/xdkdpzyy" method="POST" class="mt-10 max-w-xl mx-auto text-left" novalidate>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
@@ -431,11 +423,11 @@
                         </div>
                     </div>
                     <div class="mt-6">
-                        <label for="message" class="block text-slate-400 text-sm font-bold mb-2">Your Message</label>
+                        <label for="message" class="block text-slate-400 text-sm font-bold mb-2">Brief Project Description</label>
                         <textarea id="message" name="message" rows="5" required class="w-full p-3 rounded-lg form-input"></textarea>
                         <span class="text-red-400 text-sm mt-1 error-message"></span>
                     </div>
-                    <button type="submit" class="btn-shimmer w-full mt-8 bg-indigo-600 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 transition-all duration-300 hover:shadow-indigo-500/50 transform hover:scale-105">Send Inquiry</button>
+                    <button type="submit" class="btn-shimmer w-full mt-8 bg-indigo-600 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 transition-all duration-300 hover:shadow-indigo-500/50 transform hover:scale-105">Get Started</button>
                 </form>
             </div>
         </section>
@@ -446,7 +438,7 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
                 <h3 class="text-xl font-bold text-white mb-4">Slingshot Partners</h3>
-                <p class="text-sm">Building a smarter future, together.</p>
+                <p class="text-sm">Building a Smarter Future, Together.</p>
                 <div class="flex justify-center md:justify-start space-x-4 mt-6">
                     <a href="#" class="hover:text-indigo-300 transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
                     <a href="https://www.linkedin.com/in/nakulmandhre/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors"><i class="fab fa-linkedin-in fa-lg"></i></a>
@@ -458,8 +450,8 @@
                 <ul>
                     <li><a href="#home" class="hover:text-indigo-300 transition-colors">Home</a></li>
                     <li class="mt-2"><a href="#b2b-solutions" class="hover:text-indigo-300 transition-colors">B2B Solutions</a></li>
+                    <li class="mt-2"><a href="#demo" class="hover:text-indigo-300 transition-colors">Demo</a></li>
                     <li class="mt-2"><a href="#b2c-solutions" class="hover:text-indigo-300 transition-colors">B2C Tools</a></li>
-                    <li class="mt-2"><a href="#tech-stack" class="hover:text-indigo-300 transition-colors">Technology</a></li>
                     <li class="mt-2"><a href="#vision" class="hover:text-indigo-300 transition-colors">Vision</a></li>
                     <li class="mt-2"><a href="#contact" class="hover:text-indigo-300 transition-colors">Contact</a></li>
                 </ul>
@@ -528,17 +520,6 @@
         canvas.height = window.innerHeight;
 
         let particlesArray;
-
-        const mouse = {
-            x: null,
-            y: null,
-            radius: 150
-        }
-
-        window.addEventListener('mousemove', (event) => {
-            mouse.x = event.x;
-            mouse.y = event.y;
-        });
 
         class Particle {
             constructor(x, y, directionX, directionY, size, color) {
@@ -619,6 +600,95 @@
         
         init();
         animate();
+
+        // n8n Demo Logic
+        const demoButton = document.getElementById('demo-button');
+const demoInput = document.getElementById('demo-input');
+const demoResult = document.getElementById('demo-result');
+
+demoButton.addEventListener('click', async () => {
+    const url = demoInput.value;
+    if (!url.trim()) {
+        demoResult.innerHTML = `<p class="text-red-400">Please enter a URL to analyze.</p>`;
+        return;
+    }
+
+    // Validate URL format
+    try {
+        new URL(url);
+    } catch (e) {
+        demoResult.innerHTML = `<p class="text-red-400">Please enter a valid URL (include http:// or https://)</p>`;
+        return;
+    }
+
+    demoResult.innerHTML = `<p class="text-slate-300">Analyzing page... This may take a moment.</p>`;
+    demoButton.textContent = 'Analyzing...';
+    demoButton.disabled = true;
+
+    try {
+        // Pass URL as query parameter, not in body
+        const webhookURL = `https://n8n-service-bbi0.onrender.com/webhook/analyze-landing-page?url=${encodeURIComponent(url)}`;
+        
+        const response = await fetch(webhookURL, {
+            method: 'GET',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+            // Remove body - GET requests don't use body, URL parameter is used instead
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        console.log('Response received:', result); // Debug log
+        
+        // Handle the response - check for the text property
+        let analysisText = result.text || result.analysis || 'No analysis received';
+        
+        // Convert markdown-style formatting to HTML for better display
+        analysisText = analysisText
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold text
+            .replace(/\n• /g, '\n<br>• ') // Bullet points
+            .replace(/\n\n/g, '<br><br>') // Paragraph breaks
+            .replace(/\n/g, '<br>'); // Line breaks
+        
+        demoResult.innerHTML = `
+            <div class="text-slate-300 space-y-2">
+                <div class="text-sm text-slate-400 mb-3">
+                    <strong>Analyzed URL:</strong> ${result.url || url}
+                </div>
+                <div class="leading-relaxed">${analysisText}</div>
+                ${result.score ? `<div class="mt-4 text-sm text-indigo-300"><strong>Overall Score: ${result.score}/10</strong></div>` : ''}
+            </div>
+        `;
+
+    } catch (error) {
+        console.error("Error calling n8n workflow:", error);
+        demoResult.innerHTML = `
+            <div class="text-slate-300">
+                <p class="text-red-400 mb-3"><strong>Analysis temporarily unavailable</strong></p>
+                <p><strong>🎯 Demo Analysis for: ${url}</strong></p>
+                <p><strong>📊 Overall Score: 7.5/10</strong></p>
+                <br>
+                <p><strong>✅ Key Strengths:</strong></p>
+                <p>• Professional domain structure<br>• HTTPS security enabled<br>• Clean URL format</p>
+                <br>
+                <p><strong>💡 Top Recommendations:</strong></p>
+                <p>• Optimize page loading speeds<br>• Add social proof elements<br>• Enhance mobile responsiveness</p>
+                <br>
+                <p class="text-sm text-slate-400 mt-3">
+                    <em>This is a demo response. Our AI analysis service will provide detailed insights once fully connected.</em>
+                </p>
+            </div>
+        `;
+    } finally {
+        demoButton.textContent = 'Analyze Landing Page';
+        demoButton.disabled = false;
+    }
+});
 
         // Mobile Menu Logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
