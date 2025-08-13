@@ -22,7 +22,6 @@
             background-color: #020617;
             color: #e2e8f0;
             overflow-x: hidden;
-            cursor: none; /* Hide the default cursor */
         }
 
         h1, h2, h3, h4 {
@@ -51,33 +50,6 @@
         }
 
         html { scroll-behavior: smooth; }
-
-        /* Custom Cursor Styling */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: rgba(165, 180, 252, 0.7);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease-out;
-        }
-
-        /* Interactive Spotlight Effect */
-        #spotlight {
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0) 70%);
-            transform: translate(-50%, -50%);
-            transition: transform 0.1s ease-out;
-            z-index: -1;
-        }
 
         /* Particle Network Canvas */
         #particle-canvas {
@@ -215,44 +187,40 @@
 </head>
 <body class="text-slate-300">
 
-    <!-- Custom Cursor Elements -->
-    <div class="cursor"></div>
-
-    <!-- Interactive Spotlight -->
-    <div id="spotlight"></div>
-
     <!-- Header Section -->
     <header class="p-4 md:p-6 z-50 rounded-2xl mx-4 md:mx-8 mt-4">
         <nav class="flex items-center justify-between max-w-7xl mx-auto">
-            <a href="#home" class="text-2xl font-bold text-white flex items-center space-x-3">
+            <a href="#home" class="text-lg lg:text-xl font-bold text-white flex items-center space-x-3 flex-shrink-0">
                 <i class="fa-solid fa-rocket text-indigo-400"></i>
-                <span>Slingshot Partners</span>
+                <span class="whitespace-nowrap">Slingshot Partners</span>
             </a>
-            <div class="hidden md:flex space-x-8" id="desktop-nav">
-                <a href="#b2b-solutions" class="nav-link">B2B Solutions</a>
-                <a href="#demo" class="nav-link">Demo</a>
-                <a href="#b2c-solutions" class="nav-link">B2C Tools</a>
+            <div class="hidden lg:flex items-center space-x-4 text-xs lg:space-x-6 lg:text-sm" id="desktop-nav">
+                <a href="#b2b-solutions" class="nav-link whitespace-nowrap">Enterprise AI Solutions</a>
+                <a href="#use-case" class="nav-link">Use Case</a>
+                <a href="#b2c-solutions" class="nav-link whitespace-nowrap">Personal AI Solutions</a>
+                <a href="#tech-stack" class="nav-link">Technology</a>
                 <a href="#vision" class="nav-link">Our Vision</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <a href="#contact" class="btn-shimmer bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full hover:bg-indigo-500 transition-all duration-300 hidden md:inline-block shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/50">
+            <a href="#contact" class="btn-shimmer bg-indigo-600 text-white font-semibold py-2 px-4 lg:px-6 rounded-full hover:bg-indigo-500 transition-all duration-300 hidden lg:inline-block shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/50 whitespace-nowrap text-xs lg:text-sm">
                 Get Started
             </a>
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
     </header>
 
     <!-- Mobile menu overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-lg transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
         <div class="flex justify-end p-6">
             <button id="close-mobile-menu" class="text-white focus:outline-none"><i class="fas fa-times text-3xl"></i></button>
         </div>
         <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
-            <a href="#b2b-solutions" class="hover:text-indigo-300">B2B Solutions</a>
-            <a href="#demo" class="hover:text-indigo-300">Demo</a>
-            <a href="#b2c-solutions" class="hover:text-indigo-300">B2C Tools</a>
+            <a href="#b2b-solutions" class="hover:text-indigo-300">Enterprise AI Solutions</a>
+            <a href="#use-case" class="hover:text-indigo-300">Use Case</a>
+            <a href="#b2c-solutions" class="hover:text-indigo-300">Personal AI Solutions</a>
+            <a href="#tech-stack" class="hover:text-indigo-300">Technology</a>
             <a href="#vision" class="hover:text-indigo-300">Our Vision</a>
             <a href="#contact" class="hover:text-indigo-300">Contact</a>
         </div>
@@ -319,18 +287,57 @@
             </div>
         </section>
 
-        <!-- AI Workflow Demo Section -->
-        <section id="demo" class="py-20 md:py-28 px-4 bg-slate-900/40">
-            <div class="max-w-4xl mx-auto card rounded-3xl p-8 md:p-12 lg:p-16 scroll-animate">
+        <!-- Use Case Section -->
+        <section id="use-case" class="py-20 md:py-28 px-4 bg-slate-900/40">
+            <div class="max-w-7xl mx-auto">
                 <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white">AI Landing Page Analyzer</h2>
-                    <p class="mt-4 text-lg text-slate-400">Enter a URL to get an AI-powered analysis of the landing page's effectiveness.</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Use Case: E-commerce Automation</h2>
+                    <p class="text-center mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
+                        See how we would approach a real-world problem for a mid-sized e-commerce client to drive efficiency and boost sales.
+                    </p>
                 </div>
-                <div class="mt-10 max-w-xl mx-auto">
-                    <input type="url" id="demo-input" class="w-full p-3 rounded-lg form-input" placeholder="https://example.com">
-                    <button id="demo-button" class="btn-shimmer w-full mt-6 bg-indigo-600 text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 transition-all duration-300">Analyze Landing Page</button>
-                    <div id="demo-result" class="mt-6 text-left text-base h-auto min-h-16 p-4 bg-slate-900/50 rounded-lg border border-indigo-900/50">
-                        <p class="text-slate-400">Your analysis will appear here...</p>
+                <div class="mt-16 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-animate slide-in-left">
+                        <h3 class="text-3xl font-bold text-white">The Challenge</h3>
+                        <p class="mt-4 text-slate-400">A growing online retailer is struggling with a high volume of repetitive customer support inquiries and is frequently overstocking unpopular products, leading to wasted capital and storage costs.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-red-400 mt-1 mr-3"></i><span>High operational costs from manual support tasks.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-red-400 mt-1 mr-3"></i><span>Poor inventory management leading to financial loss.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-times-circle text-red-400 mt-1 mr-3"></i><span>Missed sales opportunities due to inefficient lead scoring.</span></li>
+                        </ul>
+                    </div>
+                    <div class="scroll-animate slide-in-right">
+                        <div class="card rounded-2xl p-8">
+                            <h3 class="text-3xl font-bold text-white">The Solution</h3>
+                            <p class="mt-4 text-slate-400">We implement a two-pronged AI strategy:</p>
+                            <ul class="mt-6 space-y-4">
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-400 mt-1 mr-3"></i><span>An AI-powered chatbot to handle 70% of routine customer inquiries (order tracking, returns).</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-400 mt-1 mr-3"></i><span>A predictive AI model to forecast product demand based on sales data, seasonality, and market trends.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <h3 class="text-3xl font-bold text-white scroll-animate">The Results</h3>
+                    <div class="grid md:grid-cols-3 gap-8 mt-8">
+                        <div class="scroll-animate" style="transition-delay: 0.2s;">
+                            <div class="card rounded-2xl p-8 h-full">
+                                <p class="text-5xl font-bold text-gradient">40%</p>
+                                <p class="mt-2 text-slate-400">Reduction in customer support response times.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-animate" style="transition-delay: 0.4s;">
+                            <div class="card rounded-2xl p-8 h-full">
+                                <p class="text-5xl font-bold text-gradient">20%</p>
+                                <p class="mt-2 text-slate-400">Decrease in overstocked inventory.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-animate" style="transition-delay: 0.6s;">
+                            <div class="card rounded-2xl p-8 h-full">
+                                <p class="text-5xl font-bold text-gradient">15%</p>
+                                <p class="mt-2 text-slate-400">Increase in conversion rates from AI-driven lead scoring.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -375,6 +382,32 @@
                                 <li class="flex items-start"><i class="fa-solid fa-circle-nodes text-purple-400 mt-1 mr-3"></i><span>Document Generation: Creates polished documents from brief prompts.</span></li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section id="tech-stack" class="py-20 md:py-28 px-4 bg-slate-900/40">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Our Technology Stack</h2>
+                    <p class="text-center mt-4 text-slate-400 max-w-3xl mx-auto scroll-animate" style="transition-delay: 0.2s;">
+                        We leverage industry-leading technologies to deliver scalable, secure, and future-ready AI solutions. This technology foundation allows us to build robust, adaptable AI systems that integrate seamlessly into your operations.
+                    </p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                    <div class="scroll-animate slide-in-left">
+                        <h3 class="text-2xl font-bold text-white">Programming & Frameworks</h3>
+                        <p class="mt-2 text-slate-400">Python, TensorFlow, PyTorch</p>
+                    </div>
+                    <div class="scroll-animate" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl font-bold text-white">Cloud & Infrastructure</h3>
+                        <p class="mt-2 text-slate-400">AWS, Docker, Kubernetes</p>
+                    </div>
+                    <div class="scroll-animate slide-in-right" style="transition-delay: 0.4s;">
+                        <h3 class="text-2xl font-bold text-white">Data & Analytics</h3>
+                        <p class="mt-2 text-slate-400">Pandas, NumPy, SQL</p>
                     </div>
                 </div>
             </div>
@@ -449,9 +482,10 @@
                 <h4 class="text-lg font-semibold text-white mb-4">Links</h4>
                 <ul>
                     <li><a href="#home" class="hover:text-indigo-300 transition-colors">Home</a></li>
-                    <li class="mt-2"><a href="#b2b-solutions" class="hover:text-indigo-300 transition-colors">B2B Solutions</a></li>
-                    <li class="mt-2"><a href="#demo" class="hover:text-indigo-300 transition-colors">Demo</a></li>
-                    <li class="mt-2"><a href="#b2c-solutions" class="hover:text-indigo-300 transition-colors">B2C Tools</a></li>
+                    <li class="mt-2"><a href="#b2b-solutions" class="hover:text-indigo-300 transition-colors">Enterprise AI Solutions</a></li>
+                    <li class="mt-2"><a href="#use-case" class="hover:text-indigo-300 transition-colors">Use Case</a></li>
+                    <li class="mt-2"><a href="#b2c-solutions" class="hover:text-indigo-300 transition-colors">Personal AI Solutions</a></li>
+                    <li class="mt-2"><a href="#tech-stack" class="hover:text-indigo-300 transition-colors">Technology</a></li>
                     <li class="mt-2"><a href="#vision" class="hover:text-indigo-300 transition-colors">Vision</a></li>
                     <li class="mt-2"><a href="#contact" class="hover:text-indigo-300 transition-colors">Contact</a></li>
                 </ul>
@@ -474,13 +508,12 @@
     <script>
         // Custom Cursor Logic
         const cursor = document.querySelector('.cursor');
-        const spotlight = document.getElementById('spotlight');
-
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            spotlight.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-        });
+        if (cursor) {
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+        }
         
         // Scroll-Based Animations
         const observer = new IntersectionObserver((entries) => {
@@ -515,180 +548,93 @@
 
         // Interactive Particle Network
         const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
 
-        let particlesArray;
+            let particlesArray;
 
-        class Particle {
-            constructor(x, y, directionX, directionY, size, color) {
-                this.x = x;
-                this.y = y;
-                this.directionX = directionX;
-                this.directionY = directionY;
-                this.size = size;
-                this.color = color;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = 'rgba(129, 140, 248, 0.5)';
-                ctx.fill();
-            }
-            update() {
-                if (this.x > canvas.width || this.x < 0) {
-                    this.directionX = -this.directionX;
+            class Particle {
+                constructor(x, y, directionX, directionY, size, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.directionX = directionX;
+                    this.directionY = directionY;
+                    this.size = size;
+                    this.color = color;
                 }
-                if (this.y > canvas.height || this.y < 0) {
-                    this.directionY = -this.directionY;
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    ctx.fillStyle = 'rgba(129, 140, 248, 0.5)';
+                    ctx.fill();
                 }
-                this.x += this.directionX;
-                this.y += this.directionY;
-                this.draw();
+                update() {
+                    if (this.x > canvas.width || this.x < 0) {
+                        this.directionX = -this.directionX;
+                    }
+                    if (this.y > canvas.height || this.y < 0) {
+                        this.directionY = -this.directionY;
+                    }
+                    this.x += this.directionX;
+                    this.y += this.directionY;
+                    this.draw();
+                }
             }
-        }
 
-        function init() {
-            particlesArray = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
-            for (let i = 0; i < numberOfParticles; i++) {
-                let size = (Math.random() * 2) + 1;
-                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * .4) - .2;
-                let directionY = (Math.random() * .4) - .2;
-                let color = 'rgba(129, 140, 248, 0.5)';
-                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            function init() {
+                particlesArray = [];
+                let numberOfParticles = (canvas.height * canvas.width) / 9000;
+                for (let i = 0; i < numberOfParticles; i++) {
+                    let size = (Math.random() * 2) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let directionX = (Math.random() * .4) - .2;
+                    let directionY = (Math.random() * .4) - .2;
+                    let color = 'rgba(129, 140, 248, 0.5)';
+                    particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+                }
             }
-        }
 
-        function connect() {
-            let opacityValue = 1;
-            for (let a = 0; a < particlesArray.length; a++) {
-                for (let b = a; b < particlesArray.length; b++) {
-                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
-                        + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                        opacityValue = 1 - (distance / 20000);
-                        ctx.strokeStyle = `rgba(165, 180, 252, ${opacityValue})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                        ctx.stroke();
+            function connect() {
+                let opacityValue = 1;
+                for (let a = 0; a < particlesArray.length; a++) {
+                    for (let b = a; b < particlesArray.length; b++) {
+                        let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
+                            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                        if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                            opacityValue = 1 - (distance / 20000);
+                            ctx.strokeStyle = `rgba(165, 180, 252, ${opacityValue})`;
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                            ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                            ctx.stroke();
+                        }
                     }
                 }
             }
-        }
 
-        function animate() {
-            requestAnimationFrame(animate);
-            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-            for (let i = 0; i < particlesArray.length; i++) {
-                particlesArray[i].update();
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+                connect();
             }
-            connect();
-        }
 
-        window.addEventListener('resize', () => {
-            canvas.width = innerWidth;
-            canvas.height = innerHeight;
+            window.addEventListener('resize', () => {
+                canvas.width = innerWidth;
+                canvas.height = innerHeight;
+                init();
+            });
+            
             init();
-        });
-        
-        init();
-        animate();
-
-        // n8n Demo Logic
-        const demoButton = document.getElementById('demo-button');
-const demoInput = document.getElementById('demo-input');
-const demoResult = document.getElementById('demo-result');
-
-demoButton.addEventListener('click', async () => {
-    const url = demoInput.value;
-    if (!url.trim()) {
-        demoResult.innerHTML = `<p class="text-red-400">Please enter a URL to analyze.</p>`;
-        return;
-    }
-
-    // Validate URL format
-    try {
-        new URL(url);
-    } catch (e) {
-        demoResult.innerHTML = `<p class="text-red-400">Please enter a valid URL (include http:// or https://)</p>`;
-        return;
-    }
-
-    demoResult.innerHTML = `<p class="text-slate-300">Analyzing page... This may take a moment.</p>`;
-    demoButton.textContent = 'Analyzing...';
-    demoButton.disabled = true;
-
-    try {
-        // Pass URL as query parameter, not in body
-        const webhookURL = `https://n8n-service-bbi0.onrender.com/webhook/analyze-landing-page?url=${encodeURIComponent(url)}`;
-        
-        const response = await fetch(webhookURL, {
-            method: 'GET',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-            // Remove body - GET requests don't use body, URL parameter is used instead
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            animate();
         }
-
-        const result = await response.json();
-        console.log('Response received:', result); // Debug log
-        
-        // Handle the response - check for the text property
-        let analysisText = result.text || result.analysis || 'No analysis received';
-        
-        // Convert markdown-style formatting to HTML for better display
-        analysisText = analysisText
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold text
-            .replace(/\n• /g, '\n<br>• ') // Bullet points
-            .replace(/\n\n/g, '<br><br>') // Paragraph breaks
-            .replace(/\n/g, '<br>'); // Line breaks
-        
-        demoResult.innerHTML = `
-            <div class="text-slate-300 space-y-2">
-                <div class="text-sm text-slate-400 mb-3">
-                    <strong>Analyzed URL:</strong> ${result.url || url}
-                </div>
-                <div class="leading-relaxed">${analysisText}</div>
-                ${result.score ? `<div class="mt-4 text-sm text-indigo-300"><strong>Overall Score: ${result.score}/10</strong></div>` : ''}
-            </div>
-        `;
-
-    } catch (error) {
-        console.error("Error calling n8n workflow:", error);
-        demoResult.innerHTML = `
-            <div class="text-slate-300">
-                <p class="text-red-400 mb-3"><strong>Analysis temporarily unavailable</strong></p>
-                <p><strong>🎯 Demo Analysis for: ${url}</strong></p>
-                <p><strong>📊 Overall Score: 7.5/10</strong></p>
-                <br>
-                <p><strong>✅ Key Strengths:</strong></p>
-                <p>• Professional domain structure<br>• HTTPS security enabled<br>• Clean URL format</p>
-                <br>
-                <p><strong>💡 Top Recommendations:</strong></p>
-                <p>• Optimize page loading speeds<br>• Add social proof elements<br>• Enhance mobile responsiveness</p>
-                <br>
-                <p class="text-sm text-slate-400 mt-3">
-                    <em>This is a demo response. Our AI analysis service will provide detailed insights once fully connected.</em>
-                </p>
-            </div>
-        `;
-    } finally {
-        demoButton.textContent = 'Analyze Landing Page';
-        demoButton.disabled = false;
-    }
-});
 
         // Mobile Menu Logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
