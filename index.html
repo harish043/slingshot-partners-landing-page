@@ -215,17 +215,14 @@
 </head>
 <body class="text-slate-300">
 
-    <!-- Custom Cursor Elements -->
     <div class="cursor"></div>
 
-    <!-- Interactive Spotlight -->
     <div id="spotlight"></div>
 
-    <!-- Header Section -->
     <header class="p-4 md:p-6 z-50 rounded-2xl mx-4 md:mx-8 mt-4">
         <nav class="flex items-center justify-between max-w-7xl mx-auto">
             <a href="#home" class="text-2xl font-bold text-white flex items-center space-x-3">
-                <i class="fa-solid fa-rocket text-indigo-400"></i>
+                <img src="icon.png" alt="Slingshot Partners Logo" class="h-8 w-auto">
                 <span>Slingshot Partners</span>
             </a>
             <div class="hidden md:flex space-x-8" id="desktop-nav">
@@ -244,7 +241,6 @@
         </nav>
     </header>
 
-    <!-- Mobile menu overlay -->
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
         <div class="flex justify-end p-6">
             <button id="close-mobile-menu" class="text-white focus:outline-none"><i class="fas fa-times text-3xl"></i></button>
@@ -259,7 +255,6 @@
     </div>
 
     <main>
-        <!-- Hero Section -->
         <section id="home" class="relative text-center pt-12 md:pt-20 lg:pt-28 pb-24 md:pb-32 lg:pb-40 px-4">
             <canvas id="particle-canvas"></canvas>
             <div class="max-w-5xl mx-auto relative z-10">
@@ -281,7 +276,6 @@
             </div>
         </section>
 
-        <!-- B2B Solutions Section -->
         <section id="b2b-solutions" class="py-20 md:py-28 px-4">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center">
@@ -319,7 +313,6 @@
             </div>
         </section>
 
-        <!-- AI Workflow Demo Section -->
         <section id="demo" class="py-20 md:py-28 px-4 bg-slate-900/40">
             <div class="max-w-4xl mx-auto card rounded-3xl p-8 md:p-12 lg:p-16 scroll-animate">
                 <div class="text-center">
@@ -336,7 +329,6 @@
             </div>
         </section>
 
-        <!-- B2C Solutions Section -->
         <section id="b2c-solutions" class="py-20 md:py-28 px-4">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center">
@@ -380,7 +372,6 @@
             </div>
         </section>
 
-        <!-- Vision Section -->
         <section id="vision" class="py-20 md:py-28 px-4">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-white scroll-animate">Vision & Commitment to Ethical AI</h2>
@@ -404,7 +395,6 @@
             </div>
         </section>
 
-        <!-- Contact Form Section -->
         <section id="contact" class="py-20 md:py-28 px-4 text-center">
             <div class="max-w-4xl mx-auto card rounded-3xl p-8 md:p-12 lg:p-16 scroll-animate">
                 <h2 class="text-4xl md:text-5xl font-bold text-white">Let’s Build the Future—Together</h2>
@@ -433,7 +423,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-transparent py-12 px-4 text-slate-400">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
@@ -449,16 +438,19 @@
                 <h4 class="text-lg font-semibold text-white mb-4">Links</h4>
                 <ul>
                     <li><a href="#home" class="hover:text-indigo-300 transition-colors">Home</a></li>
-                    <li class="mt-2"><a href="#b2b-solutions" class="hover:text-indigo-300 transition-colors">B2B Solutions</a></li>
+                    <li class="mt-2"><a href="#b2b-solutions" class="hover:text-indigo-300 transition-colors">Enterprise Solutions</a></li>
                     <li class="mt-2"><a href="#demo" class="hover:text-indigo-300 transition-colors">Demo</a></li>
-                    <li class="mt-2"><a href="#b2c-solutions" class="hover:text-indigo-300 transition-colors">B2C Tools</a></li>
+                    <li class="mt-2"><a href="#b2c-solutions" class="hover:text-indigo-300 transition-colors">Personal AI Solutions</a></li>
                     <li class="mt-2"><a href="#vision" class="hover:text-indigo-300 transition-colors">Vision</a></li>
                     <li class="mt-2"><a href="#contact" class="hover:text-indigo-300 transition-colors">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-                <p class="text-sm mt-2">nakul.mandhre@emory.edu</p>
+                <h4 class="text-lg font-semibold text-white mb-4">Our Team</h4>
+                <ul class="text-sm">
+                    <li><a href="https://www.linkedin.com/in/nakulmandhre/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors">Nakul Mandhre</a></li>
+                    <li class="mt-2"><a href="https://www.linkedin.com/in/harishb04/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-300 transition-colors">Harish Balasubramanian</a></li>
+                </ul>
             </div>
         </div>
         <div class="mt-12 text-center text-slate-500 border-t border-slate-800 pt-8">
@@ -466,7 +458,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <a href="#home" id="back-to-top" class="w-12 h-12 rounded-full items-center justify-center shadow-lg hover:bg-indigo-500 transition-colors">
         <i class="fas fa-arrow-up"></i>
     </a>
